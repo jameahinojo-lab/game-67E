@@ -106,11 +106,6 @@
 
   <div class="grid" id="buttonGrid"></div>
 
-  <!-- Time's up sound -->
-  <audio id="timesup-sound">
-    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg">
-  </audio>
-
   <script>
     const words = [
   { answer: "CZECH REPUBLIC", scramble: "EHCCZ PCBLRIEU" },
@@ -182,7 +177,7 @@
       if (timePassed >= maxTime) {
         clearInterval(timer);
         timerEl.textContent = "Time's up!";
-        document.getElementById("timesup-sound").play();
+    
 
         document.querySelectorAll(".word-btn").forEach(btn => {
           btn.disabled = true;
